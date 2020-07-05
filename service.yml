@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: encryptic-app
+  name: encryptic-svc
+  labels:
+    app: encryptic
+spec:
+  selector:
+    app: encryptic
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 9000
+

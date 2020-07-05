@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: encryptic-app
+  labels:
+    app: encryptic
+

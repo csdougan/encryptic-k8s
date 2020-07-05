@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: encryptic-app
+  name: encryptic
+  labels:
+    app: encryptic
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: encryptic
+  template:
+    metadata:
+      labels:
+        app: encryptic
+    spec:
+      containers:
+        - name: encryptic
+          image: cdougan/encryptic
+          ports:
+            - protocol: TCP
+              containerPort: 9000
+
+    
